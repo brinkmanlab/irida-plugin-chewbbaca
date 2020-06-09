@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: uk.ac.babraham:fastqc:0.11.7-nml-custom">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/uk/ac/babraham/fastqc/0.11.7-nml-custom/fastqc-0.11.7-nml-custom.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/uk/ac/babraham/fastqc/0.11.7-nml-custom/fastqc-0.11.7-nml-custom-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/uk/ac/babraham/fastqc/0.11.7-nml-custom/fastqc-0.11.7-nml-custom-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

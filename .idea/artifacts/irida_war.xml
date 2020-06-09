@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="irida:war">
+    <output-path>$PROJECT_DIR$/irida/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>irida</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="irida-20.01.war">
+      <element id="artifact" artifact-name="irida:war exploded" />
+    </root>
+  </artifact>
+</component>

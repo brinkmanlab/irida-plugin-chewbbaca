@@ -1,0 +1,221 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "format-version": "0.1",
+    "name": "chewbbaca",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "sequence_reads_paired"
+                }
+            ],
+            "label": "sequence_reads_paired",
+            "name": "Input dataset collection",
+            "outputs": [],
+            "position": {
+                "left": 295,
+                "top": 220.5
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"collection_type\": \"paired\"}",
+            "tool_version": null,
+            "type": "data_collection_input",
+            "uuid": "0662f0ee-966d-4f0d-9288-59fb51db342e",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "0351a59a-21f8-452c-ac2f-1fe832899a4d"
+                }
+            ]
+        },
+        "1": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 1,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "reference"
+                }
+            ],
+            "label": "reference",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "left": 561.5,
+                "top": 439.5
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "86c0b59b-d0ba-4c77-92b1-bea5423ac862",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "041be439-1e26-4130-8804-4646f988dd9a"
+                }
+            ]
+        },
+        "2": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4",
+            "errors": null,
+            "id": 2,
+            "input_connections": {
+                "library|input1": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "Shovill",
+            "outputs": [
+                {
+                    "name": "shovill_std_log",
+                    "type": "txt"
+                },
+                {
+                    "name": "contigs",
+                    "type": "fasta"
+                },
+                {
+                    "name": "contigs_graph",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "left": 559.5,
+                "top": 220.5
+            },
+            "post_job_actions": {
+                "HideDatasetActioncontigs": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "contigs"
+                },
+                "HideDatasetActioncontigs_graph": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "contigs_graph"
+                },
+                "HideDatasetActionshovill_std_log": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "shovill_std_log"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4",
+            "tool_shed_repository": {
+                "changeset_revision": "865119fcb694",
+                "name": "shovill",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"adv\": {\"namefmt\": \"contig%05d\", \"depth\": \"100\", \"gsize\": \"\", \"kmers\": \"\", \"opts\": \"\", \"nocorr\": \"true\", \"minlen\": \"0\", \"mincov\": \"2\"}, \"assembler\": \"spades\", \"library\": {\"lib_type\": \"collection\", \"__current_case__\": 1, \"input1\": {\"__class__\": \"ConnectedValue\"}}, \"log\": \"true\", \"trim\": \"false\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.4",
+            "type": "tool",
+            "uuid": "fd4e43a6-9fbf-4201-bc56-051765dbb10c",
+            "workflow_outputs": []
+        },
+        "3": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iss/chewbbaca/chewBBACA/2.0",
+            "errors": null,
+            "id": 3,
+            "input_connections": {
+                "selectFunction|input1": {
+                    "id": 2,
+                    "output_name": "contigs"
+                },
+                "selectFunction|mode|genes": {
+                    "id": 1,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "chewBBACA",
+            "outputs": [
+                {
+                    "name": "statistics",
+                    "type": "tsv"
+                },
+                {
+                    "name": "contigsinfo",
+                    "type": "tsv"
+                },
+                {
+                    "name": "alleles",
+                    "type": "tsv"
+                },
+                {
+                    "name": "logginginfo",
+                    "type": "txt"
+                },
+                {
+                    "name": "repeatedloci",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "left": 928.5,
+                "top": 216.5
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iss/chewbbaca/chewBBACA/2.0",
+            "tool_shed_repository": {
+                "changeset_revision": "872ed5ee7b98",
+                "name": "chewbbaca",
+                "owner": "iss",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"selectFunction\": {\"myFunctions\": \"AlleleCall\", \"__current_case__\": 1, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"mode\": {\"schema_select\": \"user\", \"__current_case__\": 1, \"genes\": {\"__class__\": \"ConnectedValue\"}}, \"bsr\": \"0.6\", \"ptfmode\": {\"ptf_select\": \"noptf\", \"__current_case__\": 2}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "2.0",
+            "type": "tool",
+            "uuid": "6b07c5e0-49dc-4240-ab94-9bb8d298e31a",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "contigsinfo",
+                    "uuid": "dad5b436-1974-4286-ab6b-e90723ce06ae"
+                },
+                {
+                    "label": null,
+                    "output_name": "alleles",
+                    "uuid": "8ff4a579-6935-4016-8ea5-2e5a1a5da857"
+                },
+                {
+                    "label": null,
+                    "output_name": "repeatedloci",
+                    "uuid": "1fab67ec-7c34-4a9e-89a2-a2b358d3c6e5"
+                },
+                {
+                    "label": null,
+                    "output_name": "statistics",
+                    "uuid": "a85df254-a6f6-4b41-93f1-b6cf395809e5"
+                },
+                {
+                    "label": null,
+                    "output_name": "logginginfo",
+                    "uuid": "b437b1ad-80d5-4fea-9187-755049df6daa"
+                }
+            ]
+        }
+    },
+    "tags": [],
+    "uuid": "0207f1b6-9bd3-44cb-853b-8d8a246122fe",
+    "version": 2
+}

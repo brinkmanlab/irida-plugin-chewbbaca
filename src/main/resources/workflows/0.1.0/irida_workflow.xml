@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iridaWorkflow>
+    <id>bc7196dc-dc2f-421d-952c-861ae1887dd5</id>
+    <name>ChewBBACA</name>
+    <version>0.1.0</version>
+    <analysisType>CHEWBBACA</analysisType>
+    <inputs>
+        <sequenceReadsPaired>sequence_reads</sequenceReadsPaired>
+        <requiresSingleSample>true</requiresSingleSample>
+    </inputs>
+    <outputs>
+        <output name="statistics" fileName="statistics.tsv"/>
+        <output name="contigsinfo" fileName="contigsinfo.tsv"/>
+        <output name="alleles" fileName="alleles.tsv"/>
+        <output name="logginginfo" fileName="logginginfo.txt"/>
+        <output name="repeatedloci" fileName="repeatedloci.txt"/>
+    </outputs>
+    <toolRepositories>
+        <repository>
+            <name>shovill</name>
+            <owner>iuc</owner>
+            <url>https://toolshed.g2.bx.psu.edu/</url>
+            <revision>865119fcb694</revision>
+        </repository>
+        <repository>
+            <name>chewbbaca</name>
+            <owner>iss</owner>
+            <url>https://toolshed.g2.bx.psu.edu/</url>
+            <revision>872ed5ee7b98</revision>
+        </repository>
+    </toolRepositories>
+</iridaWorkflow>
