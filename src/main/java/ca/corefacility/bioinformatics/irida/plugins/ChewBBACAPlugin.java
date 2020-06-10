@@ -9,10 +9,7 @@ import org.pf4j.Plugin;
 import org.pf4j.PluginWrapper;
 
 import ca.corefacility.bioinformatics.irida.model.workflow.analysis.type.AnalysisType;
-import ca.corefacility.bioinformatics.irida.pipeline.results.updater.AnalysisSampleUpdater;
-import ca.corefacility.bioinformatics.irida.service.sample.MetadataTemplateService;
-import ca.corefacility.bioinformatics.irida.service.sample.SampleService;
-import ca.corefacility.bioinformatics.irida.service.workflow.IridaWorkflowsService;
+
 
 /**
  * An example {@link IridaPlugin} implementation which will extract some

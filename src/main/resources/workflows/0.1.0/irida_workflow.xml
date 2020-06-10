@@ -5,9 +5,11 @@
     <version>0.1.0</version>
     <analysisType>CHEWBBACA</analysisType>
     <inputs>
-        <sequenceReadsPaired>sequence_reads</sequenceReadsPaired>
+        <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
+        <reference>reference</reference>
         <requiresSingleSample>true</requiresSingleSample>
     </inputs>
+    <parameters></parameters>
     <outputs>
         <output name="statistics" fileName="statistics.tsv"/>
         <output name="contigsinfo" fileName="contigsinfo.tsv"/>
