@@ -6,10 +6,18 @@
     <analysisType>CHEWBBACA</analysisType>
     <inputs>
         <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
-        <reference>reference</reference>
         <requiresSingleSample>true</requiresSingleSample>
     </inputs>
-    <parameters></parameters>
+    <parameters>
+        <parameter name="reference" required="true">
+            <dynamicSource>
+                <galaxyToolDataTable name="chewbbaca_schemas" displayColumn="name" parameterColumn="value" />
+            </dynamicSource>
+            <toolParameter
+                    toolId="toolshed.g2.bx.psu.edu/repos/iss/chewbbaca/chewBBACA/2.0"
+                    parameterName="selectFunction|mode|reference" />
+        </parameter>
+    </parameters>
     <outputs>
         <output name="statistics" fileName="statistics.tsv"/>
         <output name="contigsinfo" fileName="contigsinfo.tsv"/>

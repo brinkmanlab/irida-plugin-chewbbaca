@@ -32,47 +32,15 @@
                 {
                     "label": null,
                     "output_name": "output",
-                    "uuid": "0351a59a-21f8-452c-ac2f-1fe832899a4d"
+                    "uuid": "a338f49f-c4c3-44f7-87ef-b8fffa0d97d5"
                 }
             ]
         },
         "1": {
             "annotation": "",
-            "content_id": null,
-            "errors": null,
-            "id": 1,
-            "input_connections": {},
-            "inputs": [
-                {
-                    "description": "",
-                    "name": "reference"
-                }
-            ],
-            "label": "reference",
-            "name": "Input dataset",
-            "outputs": [],
-            "position": {
-                "left": 561.5,
-                "top": 439.5
-            },
-            "tool_id": null,
-            "tool_state": "{\"optional\": false}",
-            "tool_version": null,
-            "type": "data_input",
-            "uuid": "86c0b59b-d0ba-4c77-92b1-bea5423ac862",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "041be439-1e26-4130-8804-4646f988dd9a"
-                }
-            ]
-        },
-        "2": {
-            "annotation": "",
             "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4",
             "errors": null,
-            "id": 2,
+            "id": 1,
             "input_connections": {
                 "library|input1": {
                     "id": 0,
@@ -130,22 +98,23 @@
             "uuid": "fd4e43a6-9fbf-4201-bc56-051765dbb10c",
             "workflow_outputs": []
         },
-        "3": {
+        "2": {
             "annotation": "",
             "content_id": "toolshed.g2.bx.psu.edu/repos/iss/chewbbaca/chewBBACA/2.0",
             "errors": null,
-            "id": 3,
+            "id": 2,
             "input_connections": {
                 "selectFunction|input1": {
-                    "id": 2,
-                    "output_name": "contigs"
-                },
-                "selectFunction|mode|genes": {
                     "id": 1,
-                    "output_name": "output"
+                    "output_name": "contigs"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool chewBBACA",
+                    "name": "selectFunction"
+                }
+            ],
             "label": null,
             "name": "chewBBACA",
             "outputs": [
@@ -171,8 +140,8 @@
                 }
             ],
             "position": {
-                "left": 928.5,
-                "top": 216.5
+                "left": 933.5,
+                "top": 270.5
             },
             "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iss/chewbbaca/chewBBACA/2.0",
@@ -182,25 +151,20 @@
                 "owner": "iss",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"selectFunction\": {\"myFunctions\": \"AlleleCall\", \"__current_case__\": 1, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"mode\": {\"schema_select\": \"user\", \"__current_case__\": 1, \"genes\": {\"__class__\": \"ConnectedValue\"}}, \"bsr\": \"0.6\", \"ptfmode\": {\"ptf_select\": \"noptf\", \"__current_case__\": 2}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"selectFunction\": {\"myFunctions\": \"AlleleCall\", \"__current_case__\": 1, \"input1\": {\"__class__\": \"RuntimeValue\"}, \"mode\": {\"schema_select\": \"system\", \"__current_case__\": 0, \"reference\": {\"__class__\": \"RuntimeValue\"}}, \"bsr\": \"0.6\", \"ptfmode\": {\"ptf_select\": \"noptf\", \"__current_case__\": 2}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "2.0",
             "type": "tool",
             "uuid": "6b07c5e0-49dc-4240-ab94-9bb8d298e31a",
             "workflow_outputs": [
                 {
                     "label": null,
+                    "output_name": "logginginfo",
+                    "uuid": "b437b1ad-80d5-4fea-9187-755049df6daa"
+                },
+                {
+                    "label": null,
                     "output_name": "contigsinfo",
                     "uuid": "dad5b436-1974-4286-ab6b-e90723ce06ae"
-                },
-                {
-                    "label": null,
-                    "output_name": "alleles",
-                    "uuid": "8ff4a579-6935-4016-8ea5-2e5a1a5da857"
-                },
-                {
-                    "label": null,
-                    "output_name": "repeatedloci",
-                    "uuid": "1fab67ec-7c34-4a9e-89a2-a2b358d3c6e5"
                 },
                 {
                     "label": null,
@@ -209,13 +173,18 @@
                 },
                 {
                     "label": null,
-                    "output_name": "logginginfo",
-                    "uuid": "b437b1ad-80d5-4fea-9187-755049df6daa"
+                    "output_name": "repeatedloci",
+                    "uuid": "1fab67ec-7c34-4a9e-89a2-a2b358d3c6e5"
+                },
+                {
+                    "label": null,
+                    "output_name": "alleles",
+                    "uuid": "8ff4a579-6935-4016-8ea5-2e5a1a5da857"
                 }
             ]
         }
     },
     "tags": [],
-    "uuid": "0207f1b6-9bd3-44cb-853b-8d8a246122fe",
-    "version": 2
+    "uuid": "e628a16c-ff2c-4ca3-8efa-ef50ade71f3e",
+    "version": 3
 }
