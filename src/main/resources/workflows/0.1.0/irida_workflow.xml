@@ -6,7 +6,7 @@
     <analysisType>CHEWBBACA</analysisType>
     <inputs>
         <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
-        <requiresSingleSample>true</requiresSingleSample>
+        <requiresSingleSample>false</requiresSingleSample>
     </inputs>
     <parameters>
         <parameter name="reference" required="true">

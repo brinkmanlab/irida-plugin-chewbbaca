@@ -24,7 +24,7 @@
                 "top": 220.5
             },
             "tool_id": null,
-            "tool_state": "{\"optional\": false, \"collection_type\": \"paired\"}",
+            "tool_state": "{\"optional\": false, \"collection_type\": \"list:paired\"}",
             "tool_version": null,
             "type": "data_collection_input",
             "uuid": "0662f0ee-966d-4f0d-9288-59fb51db342e",
@@ -32,7 +32,7 @@
                 {
                     "label": null,
                     "output_name": "output",
-                    "uuid": "a338f49f-c4c3-44f7-87ef-b8fffa0d97d5"
+                    "uuid": "92dc5591-3f55-4da4-b23d-524fb2e2fbe4"
                 }
             ]
         },
@@ -143,7 +143,43 @@
                 "left": 933.5,
                 "top": 270.5
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "RenameDatasetActionalleles": {
+                    "action_arguments": {
+                        "newname": "alleles.tsv"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "alleles"
+                },
+                "RenameDatasetActioncontigsinfo": {
+                    "action_arguments": {
+                        "newname": "contigsinfo.tsv"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "contigsinfo"
+                },
+                "RenameDatasetActionlogginginfo": {
+                    "action_arguments": {
+                        "newname": "logginginfo.txt"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "logginginfo"
+                },
+                "RenameDatasetActionrepeatedloci": {
+                    "action_arguments": {
+                        "newname": "repeatedloci.txt"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "repeatedloci"
+                },
+                "RenameDatasetActionstatistics": {
+                    "action_arguments": {
+                        "newname": "statistics.tsv"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "statistics"
+                }
+            },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iss/chewbbaca/chewBBACA/2.0",
             "tool_shed_repository": {
                 "changeset_revision": "872ed5ee7b98",
@@ -158,23 +194,23 @@
             "workflow_outputs": [
                 {
                     "label": null,
-                    "output_name": "logginginfo",
-                    "uuid": "b437b1ad-80d5-4fea-9187-755049df6daa"
-                },
-                {
-                    "label": null,
                     "output_name": "contigsinfo",
                     "uuid": "dad5b436-1974-4286-ab6b-e90723ce06ae"
                 },
                 {
                     "label": null,
-                    "output_name": "statistics",
-                    "uuid": "a85df254-a6f6-4b41-93f1-b6cf395809e5"
+                    "output_name": "logginginfo",
+                    "uuid": "b437b1ad-80d5-4fea-9187-755049df6daa"
                 },
                 {
                     "label": null,
                     "output_name": "repeatedloci",
                     "uuid": "1fab67ec-7c34-4a9e-89a2-a2b358d3c6e5"
+                },
+                {
+                    "label": null,
+                    "output_name": "statistics",
+                    "uuid": "a85df254-a6f6-4b41-93f1-b6cf395809e5"
                 },
                 {
                     "label": null,
@@ -185,6 +221,6 @@
         }
     },
     "tags": [],
-    "uuid": "e628a16c-ff2c-4ca3-8efa-ef50ade71f3e",
-    "version": 3
+    "uuid": "89e0d7bd-8d89-4915-b688-14c56990a251",
+    "version": 1
 }
